@@ -1,131 +1,306 @@
-# NextJs Messenger Clone
+# ConvoX
 
-A fully responsive, real-time chat application showcasing full-stack web development skills using NextJs 13, MongoDB, Tailwind CSS, Pusher, Next-Auth, and Cloudinary.
+### Real-Time Full Stack Messaging Platform
 
-<p align="center"> 
-    <img src="public/images/Screenshot (84).png" alt="App Preview">     
+ConvoX is a fully responsive, real-time chat application built using **Next.js 13**, **MongoDB**, **Tailwind CSS**, **Pusher**, **NextAuth**, and **Cloudinary**.
+
+The project demonstrates full-stack web development by combining authentication, real-time messaging, cloud storage, and modern UI design into a scalable messaging platform.
+
+---
+
+## Preview
+
+<p align="center">
+  <img src="public/images/Screenshot (84).png" alt="ConvoX Preview">
 </p>
 
-<p align="center"> 
-    <img src="public/images/Screenshot (85).png" alt="App Preview">      
-</p>
-<p align="center"> 
-    <img src="public/images/Screenshot (88).png" alt="App Preview">      
+<p align="center">
+  <img src="public/images/Screenshot (85).png" alt="ConvoX Preview">
 </p>
 
-<p align="center"> 
-    <img src="public/images/Screenshot (89).png" alt="App Preview">      
+<p align="center">
+  <img src="public/images/Screenshot (88).png" alt="ConvoX Preview">
 </p>
 
-# App Theme changed to white
-<p align="center"> 
-    <img src="public/images/Screenshot (90).png" alt="App Preview">      
+<p align="center">
+  <img src="public/images/Screenshot (89).png" alt="ConvoX Preview">
 </p>
-# Table of Contents
 
-- [Live Demo](#live-demo)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup and Installation](#setup-and-installation)
-  - [Prerequisites](#prerequisites)
-  - [Environment Configuration](#environment-configuration)
-  - [Database Setup](#database-setup)
-  - [Authentication Setup](#authentication-setup)
-  - [Image Hosting Setup](#image-hosting-setup)
-  - [Real-Time Updates Setup](#real-time-updates-setup)
-- [Usage](#usage)
-  - [Development](#development)
-  - [Production](#production)
-- [Commands](#commands)
-- [References](#references)
+## White Theme Interface
 
+<p align="center">
+  <img src="public/images/Screenshot (90).png" alt="ConvoX White Theme">
+</p>
 
+---
 
 ## Features
 
-- **Real-time Chat Updates**: Powered by Pusher for instant messaging.
-- **Group Chat**: Create and participate in group conversations.
-- **Chat History Deletion**: Remove unwanted messages.
-- **Image Upload and Hosting**: Utilizes Cloudinary for image handling.
-- **Dynamic Themes**: Switch between light and dark modes.
-- **Responsive Design**: Optimized for both desktop and mobile devices.
+### Real-Time Messaging
 
+* Instant message delivery powered by **Pusher**
+* Live conversation updates
+* Smooth and synchronized chat experience
 
+### Group Conversations
 
-## Technologies Used
+* Create and manage group chats
+* Collaborate and communicate seamlessly
 
-- **[NextJs](https://nextjs.org/)** (13.4.x)
-- **[React](https://reactjs.org/)** (18.x)
-- **[MongoDB](https://www.mongodb.com/atlas/database)** (6.x)
-- **[Tailwind CSS](https://tailwindcss.com/)** (3.x)
-- **[Pusher](https://pusher.com/)** (5.x)
-- **[Next-Auth](https://next-auth.js.org/)** (4.x)
-- **[Typescript](https://www.typescriptlang.org/)** (5.x)
+### Secure Authentication
 
-## Setup and Installation
+* Authentication powered by **NextAuth**
+* Login using:
 
-### Prerequisites
+  * Google
+  * GitHub
 
-Ensure you have the following installed:
+### Media Sharing
 
-- Node.js (14.x or higher)
-- Yarn package manager
+* Upload and share images
+* Cloud-based storage with **Cloudinary**
 
-### Environment Configuration
+### Chat Management
 
-1. Clone the repository:
+* Delete unwanted messages
+* Manage conversations efficiently
 
-    ```sh
-    git clone https://github.com/himanshutatawat/Messenger_clone.git
-    cd NextJs-Messenger-Clone
-    ```
+### Dynamic Themes
 
-2. Create a `.env.local` file in the root directory and add the following variables:
+* Switch between:
 
-    ```env
-    DATABASE_URL=your_mongodb_connection_string
-    NEXTAUTH_URL=http://localhost:3020
-    NEXTAUTH_SECRET=your_nextauth_secret
-    GITHUB_ID=your_github_client_id
-    GITHUB_SECRET=your_github_client_secret
-    GOOGLE_ID=your_google_client_id
-    GOOGLE_SECRET=your_google_client_secret
-    CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-    CLOUDINARY_UPLOAD_PRESET=your_cloudinary_upload_preset
-    PUSHER_APP_ID=your_pusher_app_id
-    PUSHER_KEY=your_pusher_key
-    PUSHER_SECRET=your_pusher_secret
-    PUSHER_CLUSTER=your_pusher_cluster
-    ```
+  * Light Mode
+  * Dark Mode
 
-### Database Setup
+### Responsive Design
 
-1. Register at [MongoDB Atlas](https://www.mongodb.com/atlas/database) and create a cluster.
-2. Create a database user and allow access from any IP (`0.0.0.0/0`).
-3. Copy the connection string and replace `<password>` with your database user’s password. Append `?retryWrites=true&w=majority` to the connection string.
+Optimized for:
 
+* Desktop
+* Tablet
+* Mobile devices
 
+---
 
-### Project Initialization
+## Tech Stack
 
-1. Install the dependencies:
+### Frontend
 
-    ```sh
-    yarn install
-    ```
+* Next.js 13
+* React 18
+* Tailwind CSS
+* TypeScript
 
-2. Set up the database:
+### Backend & Database
 
-    ```sh
-    yarn prisma db push
-    yarn prisma generate
-    ```
+* MongoDB Atlas
+* Prisma ORM
 
-## Usage
+### Services & Integrations
 
-### Development
+* Pusher
+* NextAuth
+* Cloudinary
 
-Start the development server:
+---
 
-```sh
+## Architecture Overview
+
+ConvoX follows a full-stack real-time communication workflow.
+
+### 1. Authentication Layer
+
+Users securely authenticate using:
+
+* Google OAuth
+* GitHub OAuth
+* NextAuth session management
+
+### 2. Real-Time Communication
+
+Pusher handles:
+
+* Instant message delivery
+* Live chat synchronization
+* Real-time updates
+
+### 3. Database Layer
+
+MongoDB stores:
+
+* User data
+* Conversations
+* Messages
+* Chat metadata
+
+Prisma manages schema and database operations.
+
+### 4. Media Upload System
+
+Cloudinary provides:
+
+* Image hosting
+* Cloud storage
+* Optimized delivery
+
+---
+
+## Getting Started
+
+Follow these steps to run ConvoX locally.
+
+## Prerequisites
+
+Make sure the following are installed:
+
+* Node.js (14 or higher)
+* Yarn Package Manager
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/himanshutatawat/Messenger_clone.git
+cd ConvoX
+```
+
+### Install Dependencies
+
+```bash
+yarn install
+```
+
+---
+
+## Environment Configuration
+
+Create a **.env.local** file and add:
+
+```env
+DATABASE_URL=your_mongodb_connection_string
+NEXTAUTH_URL=http://localhost:3020
+NEXTAUTH_SECRET=your_nextauth_secret
+
+GITHUB_ID=your_github_client_id
+GITHUB_SECRET=your_github_client_secret
+
+GOOGLE_ID=your_google_client_id
+GOOGLE_SECRET=your_google_client_secret
+
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_UPLOAD_PRESET=your_cloudinary_upload_preset
+
+PUSHER_APP_ID=your_pusher_app_id
+PUSHER_KEY=your_pusher_key
+PUSHER_SECRET=your_pusher_secret
+PUSHER_CLUSTER=your_pusher_cluster
+```
+
+---
+
+## Database Setup
+
+### MongoDB Atlas Setup
+
+1. Create a MongoDB Atlas account
+2. Create a cluster
+3. Create a database user
+4. Allow IP access:
+
+```text
+0.0.0.0/0
+```
+
+5. Copy your MongoDB connection string
+6. Replace `<password>` with your database password
+
+---
+
+## Prisma Setup
+
+Initialize Prisma and sync schema:
+
+```bash
+yarn prisma db push
+yarn prisma generate
+```
+
+---
+
+## Running ConvoX
+
+### Development Mode
+
+Start development server:
+
+```bash
 yarn dev
+```
+
+Open:
+
+```text
+http://localhost:3020
+```
+
+### Production Mode
+
+Build application:
+
+```bash
+yarn build
+```
+
+Run production server:
+
+```bash
+yarn start
+```
+
+---
+
+## Available Commands
+
+| Command              | Description              |
+| -------------------- | ------------------------ |
+| yarn dev             | Start development server |
+| yarn build           | Build production app     |
+| yarn start           | Run production server    |
+| yarn prisma db push  | Push schema to database  |
+| yarn prisma generate | Generate Prisma client   |
+
+---
+
+## Key Highlights
+
+ConvoX showcases experience with:
+
+* Full Stack Development
+* Next.js Applications
+* Real-Time Systems
+* Authentication & OAuth
+* Database Design
+* Cloud Media Integration
+* Responsive UI Development
+
+---
+
+## Future Improvements
+
+Planned enhancements include:
+
+* Voice and video calling
+* Typing indicators
+* Read receipts
+* Push notifications
+* End-to-end encryption
+* Message reactions
+
+---
+
+## Author
+
+Built as a **Full Stack Next.js Messaging Platform** to explore scalable real-time communication and modern web development practices.
