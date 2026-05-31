@@ -8,32 +8,6 @@ The project demonstrates full-stack web development by combining authentication,
 
 ---
 
-## Preview
-
-<p align="center">
-  <img src="public/images/Screenshot (84).png" alt="ConvoX Preview">
-</p>
-
-<p align="center">
-  <img src="public/images/Screenshot (85).png" alt="ConvoX Preview">
-</p>
-
-<p align="center">
-  <img src="public/images/Screenshot (88).png" alt="ConvoX Preview">
-</p>
-
-<p align="center">
-  <img src="public/images/Screenshot (89).png" alt="ConvoX Preview">
-</p>
-
-## White Theme Interface
-
-<p align="center">
-  <img src="public/images/Screenshot (90).png" alt="ConvoX White Theme">
-</p>
-
----
-
 ## Features
 
 ### Real-Time Messaging
